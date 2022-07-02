@@ -1,16 +1,24 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "raylib.h"
+#include "../include/collider.h"
 
 class Player {
 private:
-    Vector2 position;
+    float kRadius {25.0f};
     float speed {10};
-    float radius {25};
+
+    Vector2 position;
+    Collider collider;
+
 public:
-    Player(int initial_posX,int initial_posY);
-    virtual void Update();
-    virtual void Render();
+    float* radius;
+    Collider *collider_player;
+
+    Player(); 
+    void SetPoint(int x,int y);
+    void Update();
+    void Render();
     ~Player();
 };
 
