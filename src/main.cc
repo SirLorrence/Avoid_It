@@ -1,4 +1,5 @@
 #include "raylib.h" //-lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+#include "../include/player.h"
 
 
 //pointer references... i understand now
@@ -34,8 +35,13 @@ int main(){
     int initX{width/2};
     int initY{height/2};
 
-    int xCoord{initX};
-    int yCoord{initY};
+
+    // initialization 
+    Player player{initX,initY};
+
+
+    // int xCoord{initX};
+    // int yCoord{initY};
 
     int Axe_coord{0};
  
@@ -65,34 +71,40 @@ int main(){
     // ========= collision
     // circle
 
-    int lc_circle{xCoord - circleRadius};
-    int rc_circle{xCoord + circleRadius};
-    int uc_circle{yCoord - circleRadius};
-    int bc_circle{yCoord + circleRadius};
+    // int lc_circle{xCoord - circleRadius};
+    // int rc_circle{xCoord + circleRadius};
+    // int uc_circle{yCoord - circleRadius};
+    // int bc_circle{yCoord + circleRadius};
 
 
-    //axe
+    // //axe
 
-    int lc_axe{300};
-    int rc_axe{300 + axeLength};
-    int uc_axe{Axe_coord};
-    int bc_axe{Axe_coord + axeLength};
+    // int lc_axe{300};
+    // int rc_axe{300 + axeLength};
+    // int uc_axe{Axe_coord};
+    // int bc_axe{Axe_coord + axeLength};
 
     SetTargetFPS(60);
     //main game loop
     while(!WindowShouldClose()){
-        if(true)
-        {
-            DrawText("Game Over", initX/2,initY,20,RED);
-        }
-        //Update Logic
-        UserInput(xCoord,yCoord, moveSpeed);
+        // if(true)
+        // {
+        //     DrawText("Game Over", initX/2,initY,20,RED);
+        // }
+        //================= Update Logic
+        player.Update();
+
+        // UserInput(xCoord,yCoord, moveSpeed);
+
+
+
         Axe(Axe_coord,axeSpeed);                
 
         //Update Render        
         BeginDrawing(); //creates an double buffer (raylib magic)
         ClearBackground(WHITE);
 
+        player.Render();
         // DrawCircle(xCoord,yCoord, circleRadius, BLUE);
         // DrawRectangle(300, Axe_coord,50,axeLength,RED);
 

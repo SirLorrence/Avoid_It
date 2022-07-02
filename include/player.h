@@ -2,15 +2,16 @@
 #define PLAYER_H
 #include "raylib.h"
 
-class player {
+class Player {
 private:
     Vector2 position;
-    float speed;
+    float speed {10};
+    float radius {25};
 public:
-    player(int initial_posX,int initial_posY);
-    virtual void Update(void);
-    virtual void Render(void);
-    ~player(void);
+    Player(int initial_posX,int initial_posY);
+    virtual void Update();
+    virtual void Render();
+    ~Player();
 };
 
 #endif
