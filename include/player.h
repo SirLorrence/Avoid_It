@@ -12,11 +12,11 @@ private:
     Collider collider;
 
 public:
-    float* radius;
+    // float* radius;
     Collider *collider_player;
 
     Player(); 
-    void SetPoint(int x,int y);
+    void ResetPoint();
     void Update();
     void Render();
     ~Player();

@@ -7,6 +7,9 @@ Axe::Axe(){
     collider.length = length;
     collider_axe = &collider;
 }
+void Axe::IncreaseSpeed(int multiplier){
+    speed = 5 * multiplier;
+}
 
 void Axe::Update(){
     position.y += speed;

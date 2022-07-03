@@ -15,6 +15,7 @@ public:
     Collider* collider_axe;
     
     Axe();
+    void IncreaseSpeed(int multiplier);
     void Update();
     void Render();
     ~Axe();

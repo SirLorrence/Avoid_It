@@ -2,13 +2,15 @@
 
 Player::Player(){
     collider.radius = kRadius; // set collider radius since player is an circle 
-    radius = &kRadius;
+    // radius = &kRadius;
     collider_player = &collider;
+    ResetPoint();
 } 
 
-void Player::SetPoint(int x,int y){
-    position.x = x;
-    position.y = y;
+void Player::ResetPoint(){
+
+    position.x = 0 + (int)kRadius;
+    position.y = GetScreenHeight()/2;
 }
 void Player::Update(){
 
