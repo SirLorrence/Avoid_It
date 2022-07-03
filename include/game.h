@@ -13,6 +13,7 @@ void SetLevel(Player& player,Axe& axe, int level_index);
 void SetupWindow();
 void DisplayGameOver(int& value);
 void DisplayHUD(int& value);
+void RestartGame(int& lvl, bool& game_state);
 
 
 // enum state{

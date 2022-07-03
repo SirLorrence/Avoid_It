@@ -45,6 +45,8 @@ int main(){
             //dereferences~ axe collider ^^
             DisplayGameOver(lvl_count);
             game_over = true;
+            prev_lvl = 0;
+            RestartGame(lvl_count,game_over);
         } 
         else if(CollisionDetection(*goal.collider_goal,player)){
             lvl_count++;

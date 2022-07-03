@@ -15,8 +15,9 @@ void SetLevel(Player& player, Axe& axe, int level_index){
 }
 
 void DisplayGameOver(int& value){
-    DrawText("Game Over", GetScreenWidth()/2 - 40,GetScreenHeight()/2,20,RED);
-    DrawText(TextFormat("Score: %i",value), GetScreenWidth()/2 - 40,GetScreenHeight()/2 + 20,20,RED);
+    DrawText("Game Over", GetScreenWidth()/2 - 40,GetScreenHeight()/2 - 10,20,RED);
+    DrawText(TextFormat("Score: %i",value), GetScreenWidth()/2 - 40,GetScreenHeight()/2 + 10,20,GREEN);
+    DrawText("R - Restart Game", GetScreenWidth()/2 - 40,GetScreenHeight()/2 + 30,20,RED);
 }
 
 void DisplayHUD(int& value){
@@ -27,7 +28,15 @@ void SetupWindow(){
     //Doom 95 running at 640x480 resolution.640x480 resolution.
     int width{640};
     int height{480};
-    InitWindow(width,height,"Hello!");
+    InitWindow(width,height,"Avoid It!");
    
     SetTargetFPS(60);
+}
+
+void RestartGame(int& lvl, bool& game_state){
+    if(IsKeyDown(KEY_R)){
+
+        lvl = 1;
+        game_state = false;
+    }
 }
