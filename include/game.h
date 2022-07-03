@@ -4,6 +4,7 @@
 #include "../include/collider.h"
 #include "../include/axe.h"
 #include "../include/player.h"
+#include "../include/goal.h"
 #include "raylib.h"
 
 // bool game_over;

@@ -22,7 +22,7 @@ Collider::Collider(){
     // int uc_axe{Axe_coord};
     // int bc_axe{Axe_coord + axeLength};
 
-// This is able to update the collider (or recreate) with circles and rectangles
+// This creates the collider and is able to update the collider (recreate) with circles and rectangles
 void Collider::UpdateCollider(float& x, float& y){
     left_corner = x - radius;
     right_corner = x + radius + length;

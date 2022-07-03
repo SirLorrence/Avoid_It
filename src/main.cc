@@ -11,6 +11,7 @@ int main(){
     // ========== initialization of game variables
     Player player{};
     Axe axe{};
+    Goal goal{};
 
     bool new_level{false};
     bool game_over{false};
@@ -45,11 +46,14 @@ int main(){
             DisplayGameOver(lvl_count);
             game_over = true;
         } 
-        
+        else if(CollisionDetection(*goal.collider_goal,player)){
+            lvl_count++;
+        }
         else {
             DisplayHUD(lvl_count);
             player.Render();
             axe.Render();
+            goal.Render();
         }
     
         EndDrawing();
