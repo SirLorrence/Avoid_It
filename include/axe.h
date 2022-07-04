@@ -1,6 +1,6 @@
 #ifndef AXE_H
 #define AXE_H
-#include "../include/raylib.h"
+#include "raylib.h"
 #include "../include/collider.h"
 
 class Axe
