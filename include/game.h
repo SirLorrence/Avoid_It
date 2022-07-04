@@ -5,7 +5,7 @@
 #include "../include/axe.h"
 #include "../include/player.h"
 #include "../include/goal.h"
-#include "raylib.h"
+#include "../include/raylib.h"
 
 // bool game_over;
 bool CollisionDetection(Collider& collider, Player& player);

@@ -1,6 +1,6 @@
 #ifndef GOAL_H
 #define GOAL_H
-#include "raylib.h"
+#include "../include/raylib.h"
 #include "../include/collider.h"
 
 class Goal{
