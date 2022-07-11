@@ -19,7 +19,9 @@ Log #1
 
 First I struggle on how to install the library, I could of just used the zip file but I wanted to create this from starch. I followed the github wiki on installing it on linux and got stuck, but I found a video that help clearified what I was doing and managed to get an basic window to work. 
 
-<!-- image -->
+<p align="center">
+  <img src="https://github.com/SirLorrence/ReadMeImages/blob/main/Avoid-it/FirstGameWindow.png?raw=true">
+</p>
 
 When in was trying to pass in an variable to my movement input, at first it did not work. Then I remember cpp as points, so instead of passing in a variable - I passed in the memory addrease and that solve my problem. Pointers are pretty cool\
 Example:
