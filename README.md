@@ -1,5 +1,5 @@
 # Avoid it!
-Based on an game called "Axe", i created my own version of it using raylib library.
+For this project, I wanted to apply my limited c++ knowledge and also code without a game engine or just a simple console application. Along with the course that I'm following, it introduced me to a simple library for game programming called "Raylib" (which is now one of my favorites). After I learned the basic knowledge of what I needed to start, I went ahead and programmed a simple game loop with increasing difficulty. This project also semi-introduced me to creating CMake files and learning how to compile to different platforms from Linux (with no luck). Also, I messed around with pointers & memory addresses and learned how to create some simple classes in c++. 
 
 
 <p align="center">
