@@ -1,6 +1,11 @@
 # Avoid it!
 Based on an game called "Axe", i created my own version of it using raylib library.
 
+
+<p align="center">
+  <img src="https://github.com/SirLorrence/ReadMeImages/blob/main/Avoid-it/AvoidIt.gif?raw=true">
+</p>
+
 Compile on Unix:
 ```
 cmake -B build
